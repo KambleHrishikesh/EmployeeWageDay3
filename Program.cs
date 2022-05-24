@@ -1,1 +1,17 @@
 ﻿Console.WriteLine("Welcome Employee Wage Computation");
+
+
+//Constants
+int IS_FULL_TIME = 1;
+//It is using to generate random numbers
+Random random = new Random();
+//Computation
+int empCheck = random.Next(0, 2);
+if (empCheck == IS_FULL_TIME)
+{
+    Console.WriteLine("Employee is Present");
+}
+else
+{
+    Console.WriteLine("Employee is Absent");
+}
