@@ -1,1 +1,32 @@
-﻿Console.WriteLine("Welcome Employee Wage Computation");
+﻿
+//Constants
+ const int IS_PART_TIME = 1;
+ const int IS_FULL_TIME = 2;
+ const int Emp_RATE_PER_TIME = 20;
+
+
+    //Variables
+    int empHrs = 0;
+    int empwage = 0;
+
+    //It is using to generate random numbers
+    Random random = new Random();
+    //Computation
+    int empCheck = random.Next(0, 2);
+
+    switch (empCheck)
+    {
+        case IS_PART_TIME:
+            empHrs = 4;
+            break;
+        case IS_FULL_TIME:
+            empHrs = 8;
+            break;
+        default:
+            empHrs = 0;
+            break;
+
+    }
+
+    empwage = empHrs * Emp_RATE_PER_TIME;
+    Console.WriteLine("EmpWage : " + empwage);
